@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Form  */
+.main-form {
+  box-shadow: 4px 4px 20px #00000021;
+}
+
+.label-subject-question {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 43px;
+}
+.label-subject-question::before {
+  content: " ";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: block;
+  border: 2px solid #313668;
+  border-radius: 50%;
+}
+.subject-question input:checked + .label-subject-question::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: #313668;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+label,
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer !important;
+}
+
+input[type="text"]:focus,
+input[type="mail"]:focus,
+textarea:focus {
+  border: 1px solid red;
+  outline: none;
+  padding: 11px 13px;
+}
+
+input[type="text"],
+input[type="mail"],
+textarea {
+  padding: 11px 13px;
+}
